@@ -36,10 +36,10 @@ db.collection("dishes")
       .paddingOuter(0.2);
 
     // join the data to rect
-    const rect = graph.selectAll("rect").data(data);
+    const rects = graph.selectAll("rect").data(data);
 
     // add attrs to rects already in DOM
-    rect
+    rects
       .attr("width", x.bandwidth)
       .attr("height", (d) => graphHeight - y(d.orders))
       .attr("fill", "orange")
@@ -47,7 +47,7 @@ db.collection("dishes")
       .attr("y", (d) => y(d.orders));
 
     // append the enter selection to the DOM
-    rect
+    rects
       .enter()
       .append("rect")
       .attr("width", x.bandwidth)
