@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Add a black border around the SVG */
+        svg {
+          border: 2px solid black;
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="canvas">
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase-firestore.js"></script>
+    <script>
+      // Import the functions you need from the SDKs you need
+      // import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const config = {
+        apiKey: "AIzaSyA7JjWO3xBmy-ktsZJmq1TTRorvwVmf3jk",
+        authDomain: "d3js-firebase-f8a27.firebaseapp.com",
+        projectId: "d3js-firebase-f8a27",
+        storageBucket: "d3js-firebase-f8a27.appspot.com",
+        messagingSenderId: "2733562345",
+        appId: "1:2733562345:web:b5b7a17581b89289375378",
+        measurementId: "G-QHZKGQLJ42"
+      };
+    
+      // Initialize Firebase
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+      db.settings({ timestampsInSnapshots: true });
+    </script>
+    <script src = "https://d3js.org/d3.v5.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
